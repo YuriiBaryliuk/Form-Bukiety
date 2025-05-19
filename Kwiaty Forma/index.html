@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moja strona</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <!--Main form-->
+    <form id="myForm">
+        <label for="selection">Wybierz rodzaj bukietu </label>
+        <select id="selection" required>
+            <option value="50">Różowe różany</option>
+            <option value="45">Biały lilak</option>
+            <option value="40">Bordowe chryzantemy</option>
+        </select><br>
+        <label for="amount">Wybierz lilczbę bukietów </label>
+        <input type="range" id="amount" min="0" max="100" value="1"  />
+        <input type="number" id="number" style="width:40px" value="1"/><hr>
+        
+        <label for="imie" style="padding-right: 84px">Imię </label>
+        <input type="text" id="imie" placeholder="Imię..."/><br>
+        <label for="nazwisko" style="padding-right: 47px">Nazwisko </label>
+        <input type="text" id="nazwisko" placeholder="Nazwisko..."/><br>
+        <label for="telefon">Numer telefonu </label>
+        <input type="number" id="telefon" placeholder="Telefon..."/><br>
+        <label for="email" style="padding-right: 30px">Adres email</label>
+        <input type="email" id="email" placeholder="Email..."/><br>
+        <hr>
+        <input class="zamowic" type="submit"/>
+        <hr>
+
+        <!--Dodatkowe uslugi wybór-->
+        <div id="czyDodatkoweUslugi">
+            <label for="uslugiDodatkowe">Dodać usługi dodatkowe?</label>
+            <input type="checkbox" id="uslugiDodatkowe"/>
+        </div>
+        <hr>
+
+        <!--Dostawa na adres-->
+        <div id="dodatkowe" style="display: none">
+            <label for="checkboxDostawaAdres">Dostawa na adres</label>
+            <input type="checkbox" id="checkboxDostawaAdres" value="10"/><br>
+            
+            <div id="dostawaInformacje" hidden>
+                <label for="dostawaDlaMnie">Dostawa dla mnie</label>
+                <input type="checkbox" id="dostawaDlaMnie" checked /><br>
+
+                <label for="dostawaImie" style="padding-right: 37px">Imię </label>
+                <input type="text" id="dostawaImie" placeholder="Imię..." disabled/><br>
+                <label for="dostawaImie">Nazwisko </label>
+                <input type="text" id="dostawaNazwisko" placeholder="Nazwisko..." disabled/><br>
+                <label for="dostawaTelefon" style="padding-right: 16px">Telefon </label>
+                <input type="text" id="dostawaTelefon" placeholder="Telefon..." disabled/><br>
+                <label for="dostawaEmail" style="padding-right: 29px">Email </label>
+                <input type="text" id="dostawaEmail" placeholder="Email..." disabled/><br>
+                <label for="inputDostawaAdres" style="padding-right: 28px">Adres </label>
+                <input type="text" id="inputDostawaAdres" placeholder="Adres..."/><br>
+            </div><br>
+
+            <!--Dekoracja dodatkowa-->
+            <label for="checkboxDekoracja">Dodatkowa dekoracja</label>
+            <input type="checkbox" id="checkboxDekoracja"/><br>
+                
+            <div id="inputDekoracja" hidden>
+                <input type="checkbox" id="brokat" value="2"/>Brokat<br>
+                <input type="checkbox" id="wstazki" value="7"/>Wstążki<br>
+                <input type="checkbox" id="sznurki" value="3" />Sznurki jutowe<br>
+                <input type="checkbox" id="tkaniny" value="5" />Tkaniny ozdobne<br><br>
+            </div><br>
+  
+            <!--Uwagi specjalne-->
+            <label for="uwagi">Uwagi specjalne</label>
+            <input type="checkbox" id="checkboxUwagi" /><br>
+            <textarea id="inputUwagi" style="height:100px; width: 200px;" hidden></textarea><br>
+        </div>
+        <hr>
+
+        <!--Kwota-->
+        <table>
+            <tr>
+                <td><label for="kwota">Kwota</label></td>
+                <td><input id="kwota" value="0" readonly/> pln<hr></td>
+            </tr>
+        </table>
+
+        <!--Koszyk-->
+        <div id="koszyk" style="display: ruby;">
+            <h3>Koszyk</h3>
+            <button id="dodajBtn" style="display:flex; align-items:end">Dodaj</button>
+        </div><hr>
+        <table id="koszykTable" style="border:2px solid white; background-color:#053b09; margin: 5px; width: 360px">
+
+        </table>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>

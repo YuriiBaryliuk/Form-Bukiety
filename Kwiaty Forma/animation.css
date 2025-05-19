@@ -1,0 +1,35 @@
+﻿body {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: lightcoral;
+}
+
+.heart {
+    background-image: url(https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/white-heavy-check-mark.png);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    /* Animation */
+    animation: pulse 2s linear infinite;
+}
+
+h1{
+    font-size:100px;
+}
+
+@keyframes pulse {
+    0% {
+        transform:  scale(1);
+        opacity: 0;
+    }
+    50% {
+        transform:  scale(1.3);
+        opacity: 1;
+    }
+    100% {
+        transform:  scale(1);
+        opacity: 1;
+    }
+}

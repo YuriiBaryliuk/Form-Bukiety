@@ -1,0 +1,39 @@
+body{
+    background-color: #89BCFA;
+    display:flex;
+    justify-content:center;
+}
+
+form {
+    display:block;
+    font-family: Calibri;
+    font-size:large;
+    border-collapse: collapse;
+    border: 3px solid #FA9489;
+    margin: 10px;
+    padding: 30px;
+    background-image: url('https://media.interflora.co.uk/i/interflora/iStock-641691556');
+}
+
+tr{
+    color: #89F7FA;
+    display:grid;
+    padding: 10px 40px;
+}
+
+input, select {
+    border: 2px solid #A59992;
+    background-color: lightblue;
+}
+
+.zamowic {
+    height: 50px;
+    width: 150px;
+    border-color: crimson;
+    border: 5px groove;
+    border-radius: 4px;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCtc4vc38I4N-N_iahJFEwhjZbcAxZffamAQ&s);
+    font-family: Bahnschrift bold 20px large;
+    color: aliceblue;
+    text-shadow: 1px 1px red;
+}
